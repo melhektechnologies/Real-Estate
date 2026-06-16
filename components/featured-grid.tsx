@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
+import Link from "next/link"
 import Image from "next/image"
 import { BedDouble, Bath, Maximize, BadgeCheck, Heart, ChevronLeft, ChevronRight } from "lucide-react"
 import { properties, type Property } from "@/lib/data"
@@ -113,10 +114,12 @@ function PropertyCard({ property, index }: { property: Property; index: number }
         </div>
       </div>
 
-      <div className="p-5">
+      <Link href={`/property/${property.id}`} className="block p-5">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <h3 className="text-base font-semibold tracking-tight">{property.title}</h3>
+            <h3 className="text-base font-semibold tracking-tight transition-colors group-hover:text-primary">
+              {property.title}
+            </h3>
             <p className="mt-0.5 text-sm text-muted-foreground">{property.location}</p>
           </div>
         </div>
@@ -136,7 +139,7 @@ function PropertyCard({ property, index }: { property: Property; index: number }
             <Maximize className="h-4 w-4" /> {property.area.toLocaleString()} ft²
           </span>
         </div>
-      </div>
+      </Link>
     </motion.article>
   )
 }

@@ -1,26 +1,24 @@
-import {
-  Waves,
-  Dumbbell,
-  Car,
-  Wifi,
-  Snowflake,
-  Flame,
-  ShieldCheck,
-  Trees,
-  Utensils,
-  Sun,
-  Wind,
-  Tv,
-  type LucideIcon,
-} from "lucide-react"
-
 export interface SpecItem {
   label: string
   value: string
 }
 
+export type AmenityIcon =
+  | "pool"
+  | "gym"
+  | "valet"
+  | "smart-home"
+  | "ac"
+  | "fireplace"
+  | "security"
+  | "garden"
+  | "kitchen"
+  | "terrace"
+  | "air"
+  | "cinema"
+
 export interface Amenity {
-  icon: LucideIcon
+  icon: AmenityIcon
   label: string
 }
 
@@ -112,18 +110,18 @@ export const propertyDetail: PropertyDetail = {
     { label: "Parking", value: "3 Covered" },
   ],
   amenities: [
-    { icon: Waves, label: "Infinity Pool" },
-    { icon: Dumbbell, label: "Private Gym" },
-    { icon: Car, label: "Valet Parking" },
-    { icon: Wifi, label: "Smart Home" },
-    { icon: Snowflake, label: "Central A/C" },
-    { icon: Flame, label: "Gas Fireplace" },
-    { icon: ShieldCheck, label: "24/7 Security" },
-    { icon: Trees, label: "Sky Garden" },
-    { icon: Utensils, label: "Chef's Kitchen" },
-    { icon: Sun, label: "Wraparound Terrace" },
-    { icon: Wind, label: "Air Purification" },
-    { icon: Tv, label: "Home Cinema" },
+    { icon: "pool", label: "Infinity Pool" },
+    { icon: "gym", label: "Private Gym" },
+    { icon: "valet", label: "Valet Parking" },
+    { icon: "smart-home", label: "Smart Home" },
+    { icon: "ac", label: "Central A/C" },
+    { icon: "fireplace", label: "Gas Fireplace" },
+    { icon: "security", label: "24/7 Security" },
+    { icon: "garden", label: "Sky Garden" },
+    { icon: "kitchen", label: "Chef's Kitchen" },
+    { icon: "terrace", label: "Wraparound Terrace" },
+    { icon: "air", label: "Air Purification" },
+    { icon: "cinema", label: "Home Cinema" },
   ],
   floorPlans: [
     {
